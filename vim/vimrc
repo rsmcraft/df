@@ -1,0 +1,44 @@
+" Base Configuration for development usability
+
+set nocompatible
+set nowrap
+syntax on
+set number
+
+" file type detection w/ plugin loading
+filetype on
+filetype plugin on
+filetype indent on
+
+" automatically reload files changed outside of vim
+set autoread
+
+" utf8 encoding
+set encoding=utf-8
+set fileencoding=utf-8
+
+" matchit plugin #Look this up#
+runtime macros/matchit.vim
+
+" change default behavior so backspace in insert mode
+" deletes over line breaks and auto-indents
+set backspace=indent,eol,start
+
+" keep buffers open in background
+set hidden
+
+" line ending stuff
+set fileformat=unix
+set fileformats=unix,dos
+
+" save up to 100 marks and enable capital marks #Look this up#
+set viminfo='100,f1
+
+" calm down the screen redrawing
+set lazyredraw
+
+execute pathogen#infect()
+call pathogen#helptags()
+
+
+
